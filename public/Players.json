@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Virat Kohli",
+    "image": "https://i.ibb.co/SgS8ZV3/Virat.jpg",
+    "country": "India",
+    "rating": 5.0,
+    "role": "Batsman",
+    "batHand": "Right",
+    "ballHand": "Right",
+    "price": 170000000
+  },
+  {
+    "id": 2,
+    "name": "Ben Stokes",
+    "image": "https://i.ibb.co/bt5xknf/Van-stock.webp",
+    "country": "England",
+    "rating": 4.8,
+    "role": "All-Rounder",
+    "batHand": "Left",
+    "ballHand": "Right",
+    "price": 160000000
+  },
+  {
+    "id": 3,
+    "name": "Jasprit Bumrah",
+    "image": "https://i.ibb.co/gLsFJ2S5/Jasprit.webp",
+    "country": "India",
+    "rating": 4.9,
+    "role": "Bowler",
+    "batHand": "Right",
+    "ballHand": "Right",
+    "price": 120000000
+  },
+  {
+    "id": 4,
+    "name": "Jos Buttler",
+    "image": "https://i.ibb.co/pBzQZ7fm/Jos.webp",
+    "country": "England",
+    "rating": 4.7,
+    "role": "Wicket-Keeper",
+    "batHand": "Right",
+    "ballHand": "N/A",
+    "price": 100000000
+  },
+  {
+    "id": 5,
+    "name": "Ravindra Jadeja",
+    "image": "https://i.ibb.co/v6hgyHbc/Ravindra.jpg",
+    "country": "India",
+    "rating": 4.8,
+    "role": "All-Rounder",
+    "batHand": "Left",
+    "ballHand": "Left",
+    "price": 160000000
+  },
+  {
+    "id": 6,
+    "name": "Rashid Khan",
+    "image": "https://i.ibb.co/RGXhf8pY/Rashid.webp",
+    "country": "Afghanistan",
+    "rating": 4.9,
+    "role": "Bowler",
+    "batHand": "Right",
+    "ballHand": "Right",
+    "price": 150000000
+  },
+  {
+    "id": 7,
+    "name": "David Warner",
+    "image": "https://i.ibb.co/TqvGXxb2/David.webp",
+    "country": "Australia",
+    "rating": 4.5,
+    "role": "Batsman",
+    "batHand": "Left",
+    "ballHand": "N/A",
+    "price": 60000000
+  },
+  {
+    "id": 8,
+    "name": "Hardik Pandya",
+    "image": "https://i.ibb.co/fV4VNV6w/Hardik.webp",
+    "country": "India",
+    "rating": 4.6,
+    "role": "All-Rounder",
+    "batHand": "Right",
+    "ballHand": "Right",
+    "price": 150000000
+  },
+  {
+    "id": 9,
+    "name": "Trent Boult",
+    "image": "https://i.ibb.co/N2jLNrgk/Trand.jpg",
+    "country": "New Zealand",
+    "rating": 4.6,
+    "role": "Bowler",
+    "batHand": "Right",
+    "ballHand": "Left",
+    "price": 80000000
+  },
+  {
+    "id": 10,
+    "name": "Shubman Gill",
+    "image": "https://i.ibb.co/B2PpRfM8/Gill.webp",
+    "country": "India",
+    "rating": 4.7,
+    "role": "Batsman",
+    "batHand": "Right",
+    "ballHand": "N/A",
+    "price": 80000000
+  },
+  {
+    "id": 11,
+    "name": "Heinrich Klaasen",
+    "image": "https://i.ibb.co/NgtMdgR6/Hainrich.webp",
+    "country": "South Africa",
+    "rating": 4.8,
+    "role": "Wicket-Keeper",
+    "batHand": "Right",
+    "ballHand": "N/A",
+    "price": 50000000
+  },
+  {
+    "id": 12,
+    "name": "Glenn Maxwell",
+    "image": "https://i.ibb.co/wr64Lc9q/Glenn.webp",
+    "country": "Australia",
+    "rating": 4.2,
+    "role": "All-Rounder",
+    "batHand": "Right",
+    "ballHand": "Right",
+    "price": 110000000
+  }
+]
