@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="font">
       <div className="navbar bg-base-100 shadow-sm">
-        <div className="navbar-start md:ml-[400px]">
+        <div className="navbar-start md:ml-[350px]">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -63,7 +63,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end md:mr-[400px]">
+        <div className="navbar-end md:mr-[350px]">
           <a className="btn">
             <span>0</span> Coin <img src={coin} alt="" />
           </a>
