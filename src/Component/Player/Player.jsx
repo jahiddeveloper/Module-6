@@ -1,8 +1,8 @@
 import React from "react";
-import userImg from "../../assets/user.png"
-import vactor from "../../assets/Vector.png"
+import userImg from "../../assets/user.png";
+import vactor from "../../assets/Vector.png";
 
-const Player = ({player}) => {
+const Player = ({ player }) => {
   return (
     <div className="font">
       <div className="card bg-base-100 w-96 shadow-lg p-2">
