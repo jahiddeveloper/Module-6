@@ -1,10 +1,10 @@
 import React from "react";
-import navImg from "./assets/logo.png"
-import coin from "./assets/Coin.png"
+import navImg from "./assets/logo.png";
+import coin from "./assets/Coin.png";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="font">
       <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start md:ml-[400px]">
           <div className="dropdown">
@@ -43,7 +43,9 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="w-15 h-15"><img src={navImg} alt="" /></a>
+          <a className="w-15 h-15">
+            <img src={navImg} alt="" />
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -62,7 +64,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end md:mr-[400px]">
-          <a className="btn"><span>0</span> Coin <img src={coin} alt="" /></a>
+          <a className="btn">
+            <span>0</span> Coin <img src={coin} alt="" />
+          </a>
         </div>
       </div>
     </div>
