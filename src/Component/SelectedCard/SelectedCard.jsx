@@ -1,11 +1,10 @@
 import React from "react";
-import removeImg from "../../assets/remove.png"
+import removeImg from "../../assets/remove.png";
 
-const SelectedCard = ({player, removePlayer}) => {
-
+const SelectedCard = ({ player, removePlayer }) => {
   let handleRemove = () => {
     removePlayer(player);
-  }
+  };
 
   return (
     <div className="font">

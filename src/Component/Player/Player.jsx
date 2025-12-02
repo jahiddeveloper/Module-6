@@ -3,7 +3,13 @@ import userImg from "../../assets/user.png";
 import vactor from "../../assets/Vector.png";
 import { toast } from "react-toastify";
 
-const Player = ({ player, setAvailableBalance, availableBalance, buyPlayers, setBuyPlayers }) => {
+const Player = ({
+  player,
+  setAvailableBalance,
+  availableBalance,
+  buyPlayers,
+  setBuyPlayers,
+}) => {
   let [isSelected, setIsSelected] = useState(false);
 
   let handleSelected = (playerData) => {
@@ -11,14 +17,14 @@ const Player = ({ player, setAvailableBalance, availableBalance, buyPlayers, set
       toast("Please update your balance !");
       return;
     }
-    if(buyPlayers.length === 6) {
-      toast("'6' players already selected.")
+    if (buyPlayers.length === 6) {
+      toast("'6' players already selected.");
       return;
     }
     setIsSelected(true);
     setAvailableBalance(availableBalance - playerData.price);
 
-    setBuyPlayers([...buyPlayers, playerData])
+    setBuyPlayers([...buyPlayers, playerData]);
   };
 
   return (

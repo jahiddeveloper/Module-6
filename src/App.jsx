@@ -1,5 +1,5 @@
 import { Suspense, useState } from "react";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import AvailablePlayers from "./Component/AvailablePlayers/AvailablePlayers";
 import Hero from "./Hero";
@@ -11,13 +11,13 @@ let fetchPlayers = fetch("/Players.json").then((res) => res.json());
 function App() {
   let [toggole, setToggole] = useState(true);
   let [availableBalance, setAvailableBalance] = useState(6000000000);
-  let [buyPlayers, setBuyPlayers] = useState([])
+  let [buyPlayers, setBuyPlayers] = useState([]);
 
   let removePlayer = (p) => {
-    let filterData = buyPlayers.filter(ply => ply.name !== p.name)
+    let filterData = buyPlayers.filter((ply) => ply.name !== p.name);
     setBuyPlayers(filterData);
-    setAvailableBalance(filterData + parseInt(p.price))
-  }
+    setAvailableBalance(filterData + parseInt(p.price));
+  };
 
   return (
     <>
@@ -26,7 +26,9 @@ function App() {
 
       <div className="max-w-[1200px] mx-1 md:mx-auto mt-10 flex justify-between items-center">
         <h3 className="text-2xl font-bold">
-          {toggole === true ? "Available Players" : `Selected Player (${buyPlayers.length}/6)`}
+          {toggole === true
+            ? "Available Players"
+            : `Selected Player (${buyPlayers.length}/6)`}
         </h3>
         <div>
           <button
@@ -51,8 +53,8 @@ function App() {
       {toggole === true ? (
         <Suspense fallback={<h3>Just a sec</h3>}>
           <AvailablePlayers
-          buyPlayers = {buyPlayers}
-          setBuyPlayers = {setBuyPlayers}
+            buyPlayers={buyPlayers}
+            setBuyPlayers={setBuyPlayers}
             availableBalance={availableBalance}
             setAvailableBalance={setAvailableBalance}
             fetchPlayers={fetchPlayers}
@@ -60,7 +62,12 @@ function App() {
         </Suspense>
       ) : (
         <Suspense fallback={<h3>Just a sec</h3>}>
-          <SelectedPlayers toggole = {toggole} setToggole = {setToggole} removePlayer = {removePlayer} buyPlayers= {buyPlayers}></SelectedPlayers>
+          <SelectedPlayers
+            toggole={toggole}
+            setToggole={setToggole}
+            removePlayer={removePlayer}
+            buyPlayers={buyPlayers}
+          ></SelectedPlayers>
         </Suspense>
       )}
 
