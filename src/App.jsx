@@ -60,7 +60,7 @@ function App() {
         </Suspense>
       ) : (
         <Suspense fallback={<h3>Just a sec</h3>}>
-          <SelectedPlayers removePlayer = {removePlayer} buyPlayers= {buyPlayers}></SelectedPlayers>
+          <SelectedPlayers toggole = {toggole} setToggole = {setToggole} removePlayer = {removePlayer} buyPlayers= {buyPlayers}></SelectedPlayers>
         </Suspense>
       )}
 
