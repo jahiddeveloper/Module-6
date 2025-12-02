@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import userImg from "../../assets/user.png";
 import vactor from "../../assets/Vector.png";
+import { toast } from "react-toastify";
 
 const Player = ({ player, setAvailableBalance, availableBalance, buyPlayers, setBuyPlayers }) => {
   let [isSelected, setIsSelected] = useState(false);
 
   let handleSelected = (playerData) => {
     if (availableBalance < playerData.price) {
-      alert("Please update your balance !");
+      toast("Please update your balance !");
+      return;
+    }
+    if(buyPlayers.length === 6) {
+      toast("'6' players already selected.")
       return;
     }
     setIsSelected(true);

@@ -1,4 +1,5 @@
 import { Suspense, useState } from "react";
+import { ToastContainer } from 'react-toastify';
 import "./App.css";
 import AvailablePlayers from "./Component/AvailablePlayers/AvailablePlayers";
 import Hero from "./Hero";
@@ -9,7 +10,7 @@ let fetchPlayers = fetch("/Players.json").then((res) => res.json());
 
 function App() {
   let [toggole, setToggole] = useState(true);
-  let [availableBalance, setAvailableBalance] = useState(600000000);
+  let [availableBalance, setAvailableBalance] = useState(6000000000);
   let [buyPlayers, setBuyPlayers] = useState([])
 
   let removePlayer = (p) => {
@@ -62,6 +63,8 @@ function App() {
           <SelectedPlayers removePlayer = {removePlayer} buyPlayers= {buyPlayers}></SelectedPlayers>
         </Suspense>
       )}
+
+      <ToastContainer />
     </>
   );
 }
