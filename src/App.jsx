@@ -19,7 +19,7 @@ function App() {
 
       <div className="max-w-[1200px] mx-1 md:mx-auto mt-10 flex justify-between items-center">
         <h3 className="text-2xl font-bold">
-          {toggole === true ? "Available Players" : "Selected Player"}
+          {toggole === true ? "Available Players" : `Selected Player (${buyPlayers.length}/6)`}
         </h3>
         <div>
           <button
@@ -36,7 +36,7 @@ function App() {
               toggole === false ? "bg-[#e7fe29]" : ""
             } ${toggole === false ? "font-bold" : ""}`}
           >
-            Selected <span>(0)</span>
+            Selected <span>({buyPlayers.length})</span>
           </button>
         </div>
       </div>
