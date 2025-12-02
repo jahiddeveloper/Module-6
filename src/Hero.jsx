@@ -4,7 +4,7 @@ import heroImg from "./assets/banner-main.png";
 const Hero = () => {
   return (
     <div
-      className={`font max-w-[1200px] mx-auto mt-6 bg-[url('./assets/bg-shadow.png')] bg-cover bg-center bg-[#131313] py-12 rounded-3xl`}
+      className={`font max-w-[1200px] md:mx-auto mt-6 bg-[url('./assets/bg-shadow.png')] bg-cover bg-center bg-[#131313] py-12 rounded-3xl mx-1`}
     >
       <img className="mx-auto block" src={heroImg} alt="" />
       <h1 className="mt-6 text-4xl font-bold text-center text-white">

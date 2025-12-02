@@ -8,15 +8,18 @@ import SelectedPlayers from "./Component/SelectedPlayers/SelectedPlayers";
 let fetchPlayers = fetch("/Players.json").then((res) => res.json());
 
 function App() {
-  let [toggole, setToggole] = useState(false);
+  let [toggole, setToggole] = useState(true);
+  let [availableBalance, setAvailableBalance] = useState(600000000);
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar availableBalance={availableBalance}></Navbar>
       <Hero></Hero>
 
-      <div className="max-w-[1200px] mx-auto mt-10 flex justify-between items-center">
-        <h3 className="text-2xl font-bold">Available Players</h3>
+      <div className="max-w-[1200px] mx-1 md:mx-auto mt-10 flex justify-between items-center">
+        <h3 className="text-2xl font-bold">
+          {toggole === true ? "Available Players" : "Selected Player"}
+        </h3>
         <div>
           <button
             onClick={() => setToggole(true)}
@@ -39,7 +42,11 @@ function App() {
 
       {toggole === true ? (
         <Suspense fallback={<h3>Just a sec</h3>}>
-          <AvailablePlayers fetchPlayers={fetchPlayers}></AvailablePlayers>
+          <AvailablePlayers
+            availableBalance={availableBalance}
+            setAvailableBalance={setAvailableBalance}
+            fetchPlayers={fetchPlayers}
+          ></AvailablePlayers>
         </Suspense>
       ) : (
         <Suspense fallback={<h3>Just a sec</h3>}>
