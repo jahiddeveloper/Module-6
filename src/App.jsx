@@ -10,6 +10,7 @@ let fetchPlayers = fetch("/Players.json").then((res) => res.json());
 function App() {
   let [toggole, setToggole] = useState(true);
   let [availableBalance, setAvailableBalance] = useState(600000000);
+  let [buyPlayers, setBuyPlayers] = useState([])
 
   return (
     <>
@@ -43,6 +44,8 @@ function App() {
       {toggole === true ? (
         <Suspense fallback={<h3>Just a sec</h3>}>
           <AvailablePlayers
+          buyPlayers = {buyPlayers}
+          setBuyPlayers = {setBuyPlayers}
             availableBalance={availableBalance}
             setAvailableBalance={setAvailableBalance}
             fetchPlayers={fetchPlayers}
@@ -50,7 +53,7 @@ function App() {
         </Suspense>
       ) : (
         <Suspense fallback={<h3>Just a sec</h3>}>
-          <SelectedPlayers></SelectedPlayers>
+          <SelectedPlayers buyPlayers= {buyPlayers}></SelectedPlayers>
         </Suspense>
       )}
     </>
