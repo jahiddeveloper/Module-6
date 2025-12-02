@@ -12,6 +12,12 @@ function App() {
   let [availableBalance, setAvailableBalance] = useState(600000000);
   let [buyPlayers, setBuyPlayers] = useState([])
 
+  let removePlayer = (p) => {
+    let filterData = buyPlayers.filter(ply => ply.name !== p.name)
+    setBuyPlayers(filterData);
+    setAvailableBalance(filterData + parseInt(p.price))
+  }
+
   return (
     <>
       <Navbar availableBalance={availableBalance}></Navbar>
@@ -53,7 +59,7 @@ function App() {
         </Suspense>
       ) : (
         <Suspense fallback={<h3>Just a sec</h3>}>
-          <SelectedPlayers buyPlayers= {buyPlayers}></SelectedPlayers>
+          <SelectedPlayers removePlayer = {removePlayer} buyPlayers= {buyPlayers}></SelectedPlayers>
         </Suspense>
       )}
     </>

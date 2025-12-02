@@ -1,7 +1,12 @@
 import React from "react";
 import removeImg from "../../assets/remove.png"
 
-const SelectedCard = ({player}) => {
+const SelectedCard = ({player, removePlayer}) => {
+
+  let handleRemove = () => {
+    removePlayer(player);
+  }
+
   return (
     <div className="font">
       <div className="flex justify-between items-center border-1 border-gray-200 shadow-sm p-5 rounded-xl mt-3">
@@ -16,7 +21,7 @@ const SelectedCard = ({player}) => {
             <p className="text-gray-500 mt-2">Bat-hand : {player.batHand}</p>
           </div>
         </div>
-        <div>
+        <div onClick={handleRemove}>
           <img
             className="cursor-pointer hover:scale-150 hover:transition duration-300"
             src={removeImg}
