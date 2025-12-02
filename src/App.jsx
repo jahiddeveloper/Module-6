@@ -25,7 +25,7 @@ function App() {
       <Hero></Hero>
 
       <div className="max-w-[1200px] mx-1 md:mx-auto mt-10 flex justify-between items-center">
-        <h3 className="text-2xl font-bold">
+        <h3 className="text-xl md:text-2xl font-bold">
           {toggole === true
             ? "Available Players"
             : `Selected Player (${buyPlayers.length}/6)`}
@@ -33,7 +33,7 @@ function App() {
         <div>
           <button
             onClick={() => setToggole(true)}
-            className={`px-8 cursor-pointer border-r-0 py-2 border-1 border-gray-200 rounded-l-xl ${
+            className={`px-4 md:px-8 cursor-pointer border-r-0 py-2 border-1 border-gray-200 rounded-l-xl ${
               toggole === true ? "bg-[#e7fe29]" : ""
             } ${toggole === true ? "font-bold" : ""}`}
           >
@@ -41,7 +41,7 @@ function App() {
           </button>
           <button
             onClick={() => setToggole(false)}
-            className={`px-8 cursor-pointer border-l-0 py-2 border-1 border-gray-200 rounded-r-xl ${
+            className={`px-4 md:px-8 cursor-pointer border-l-0 py-2 border-1 border-gray-200 rounded-r-xl ${
               toggole === false ? "bg-[#e7fe29]" : ""
             } ${toggole === false ? "font-bold" : ""}`}
           >
