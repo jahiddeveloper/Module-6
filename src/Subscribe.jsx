@@ -2,7 +2,7 @@ import React from "react";
 
 const Subscribe = () => {
   return (
-    <div className="font max-w-[1200px] mx-1 md:mx-auto mt-25 md:mt-50">
+    <div className="font max-w-[1200px] mx-1 md:mx-auto mt-15 md:mt-25">
       <div className="bg-[url('./assets/bg-shadow.png')] bg-cover bg-center py-22 bg-white rounded-3xl">
         <h1 className="text-3xl md:text-4xl font-bold text-center">
           Subscribe to our Newsletter
