@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import SelectedPlayers from "./Component/SelectedPlayers/SelectedPlayers";
 import Subscribe from "./Subscribe";
 import Fotter from "./Fotter";
+import Fo from "./Fo";
 
 let fetchPlayers = fetch("/Players.json").then((res) => res.json());
 
@@ -75,6 +76,7 @@ function App() {
 
       <Subscribe></Subscribe>
       <Fotter></Fotter>
+      <Fo></Fo>
 
       <ToastContainer />
     </>
