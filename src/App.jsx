@@ -5,6 +5,8 @@ import AvailablePlayers from "./Component/AvailablePlayers/AvailablePlayers";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import SelectedPlayers from "./Component/SelectedPlayers/SelectedPlayers";
+import Subscribe from "./Subscribe";
+import Fotter from "./Fotter";
 
 let fetchPlayers = fetch("/Players.json").then((res) => res.json());
 
@@ -70,6 +72,9 @@ function App() {
           ></SelectedPlayers>
         </Suspense>
       )}
+
+      <Subscribe></Subscribe>
+      <Fotter></Fotter>
 
       <ToastContainer />
     </>
